@@ -1,4 +1,6 @@
 set fish_greeting ""
 
-alias ct "python3 /home/caleb/Notes/ctasks/ctasks.py"
-alias assignments "python3 /home/caleb/Documents/Scripts/assignments.py"
+ulimit -c 0
+
+alias ct "python3 /home/caleb/notes/ctasks/ctasks.py"
+alias assignments "python3 /home/caleb/scripts/assignments.py"
