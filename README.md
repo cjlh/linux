@@ -13,6 +13,7 @@ A repository for my Linux configuration files.
 * i3lock
 * fish shell
 * Vim
+* rofi
 
 ## TODO:
 * Clean up and add i3blocks scripts

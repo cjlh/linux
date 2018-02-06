@@ -1,0 +1,23 @@
+! ROFI SETTINGS
+!rofi.separator-style: solid
+rofi.bw: 0
+rofi.font: Roboto Mono 12
+rofi.eh: 1
+rofi.lines: 10
+rofi.padding: 12
+rofi.terminal: gmome-terminal
+!rofi.bc: #232D33
+!rofi.bg: argb:ff232D33
+!rofi.fg: #aaaaaa
+!rofi.bg-active: #232D33
+!rofi.fg-active: #ffffff
+!rofi.hlbg: #597280
+rofi.width: 600
+
+! State:           'bg',     'fg',     'bgalt',  'hlbg',   'hlfg'
+rofi.color-normal: #232D33,  #aaaaaa,  #232D33,  #597280,  #ffffff
+!rofi.color-urgent: #fdf6e3,  #dc322f,  #eee8d5,  #dc322f,  #fdf6e3
+!rofi.color-active: #fdf6e3,  #268bd2,  #eee8d5,  #268bd2,  #fdf6e3
+
+!                  'background', 'border'
+rofi.color-window: #232D33,      #232D33
