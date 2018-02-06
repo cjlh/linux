@@ -16,6 +16,7 @@ A repository for my Linux configuration files.
 * rofi
 
 ## TODO:
+* Add i3blocks config
 * Clean up and add i3blocks scripts
 * Add more of my own scripts
 * Improve local directory structure to allow easier git use and portability
