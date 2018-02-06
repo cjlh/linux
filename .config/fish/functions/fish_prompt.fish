@@ -10,7 +10,7 @@ function fish_prompt
     #set_color -i
     printf " in "
     set_color -i
-    if [ $PWD = "/home/caleb" ]
+    if [ $PWD = $HOME ]
         printf "~"
     else
         echo -n (basename $PWD)

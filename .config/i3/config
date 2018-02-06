@@ -84,7 +84,7 @@ bindsym $mod+Delete exec systemctl hibernate
 bindsym $mod+shift+Delete exec shutdown -h now
 bindsym $mod+shift+Mod1+Delete exec shutdown -r now
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
-bindsym $mod+l exec sh ~/Documents/Scripts/lockscreen/lock_screen.sh
+bindsym $mod+l exec sh ~/scripts/lockscreen/lock_screen.sh
 #monitors
 #bindsym $mod+numbersign exec --no-startup-id sh /home/caleb/Documents/Scripts/lockscreen/ext_monitor.sh
 #bindsym $mod+shift+numbersign exec --no-startup-id xrandr --auto
