@@ -1,6 +1,6 @@
 #! /bin/bash
 
-icon="$HOME/Documents/Scripts/lockscreen/icon.png"
+icon="$HOME/scripts/lockscreen/icon.png"
 tmpbg='/tmp/screen.png'
 
 #(( $# )) && { icon=$1; }
