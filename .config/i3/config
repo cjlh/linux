@@ -78,6 +78,7 @@ bindsym $mod+u exec nemo --no-desktop
 bindsym $mod+shift+u exec pcmanfm
 bindsym $mod+shift+Mod1+u exec killall gvfsd-sftp
 bindsym $mod+y exec subl
+bindsym $mod+shift+v exec gnome-terminal -e "vim"
 bindsym $mod+Print exec scrot
 bindsym $mod+shift+Print exec scrot -u
 bindsym $mod+Delete exec systemctl hibernate
