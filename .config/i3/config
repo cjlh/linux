@@ -58,6 +58,9 @@ exec --no-startup-id dunst
 #exec --no-startup-id xfce4-power-manager
 ## Start redshift
 #exec --no-startup-id redshift-gtk
+# Start libinput-gestures (config .config/libinput-gestures.conf) to allow three-finger swiping gestures
+exec --no-startup-id libinput-gestures-setup start
+
 
 # Custom keybinds
 # Super-put: paste as if written in the keyboard
@@ -141,9 +144,9 @@ bindsym XF86WLAN exec sh /home/caleb/Documents/Scripts/toggle_wifi.sh
 
 # Audio controls
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && killall -USR1 i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
 
 # Spotify track controls
 bindsym shift+XF86AudioMute exec --no-startup-id qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
