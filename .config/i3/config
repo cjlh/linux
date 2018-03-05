@@ -129,8 +129,8 @@ bindsym $mod+shift+ctrl+0 exec sh ~/Documents/Scripts/swap_workspace_with.sh 10:
 
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec light -A 5 && pkill -RTMIN+9 i3blocks
+bindsym XF86MonBrightnessDown exec light -U 5 && pkill -RTMIN+9 i3blocks
 
 # Keyboard backlight controls
 bindsym XF86KbdBrightnessUp exec /home/caleb/Documents/Scripts/kb-backlight.py +
@@ -144,9 +144,9 @@ bindsym XF86WLAN exec sh /home/caleb/Documents/Scripts/toggle_wifi.sh
 
 # Audio controls
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && killall -USR1 i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% && pkill -RTMIN+10 i3blocks
 
 # Spotify track controls
 bindsym shift+XF86AudioMute exec --no-startup-id qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
@@ -182,7 +182,10 @@ bindsym $mod+Return exec gnome-terminal
 #for_window [class="Gnome-terminal"] floating enable
 for_window [title="floating-terminal"] floating enable
 #bindsym $mod+shift+Return exec gnome-terminal --title="floating"
-#bindsym $mod+shift+Return exec xfce4-terminal 
+#bindsym $mod+shift+Return exec xfce4-terminal
+
+# Start specific programs in floating mode
+for_window [class="xpad"] floating enable
 
 # kill focused window
 bindsym $mod+Shift+q kill
