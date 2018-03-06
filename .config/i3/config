@@ -60,6 +60,7 @@ exec --no-startup-id dunst
 #exec --no-startup-id redshift-gtk
 # Start libinput-gestures (config .config/libinput-gestures.conf) to allow three-finger swiping gestures
 exec --no-startup-id libinput-gestures-setup start
+exec xpad
 
 
 # Custom keybinds
@@ -142,6 +143,7 @@ bindsym XF86TouchpadToggle exec sh /home/caleb/Documents/Scripts/toggle_touchpad
 # Enable/disable WiFi
 bindsym XF86WLAN exec sh /home/caleb/Documents/Scripts/toggle_wifi.sh
 
+# AUDIO ---------------------------------------
 # Audio controls
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && killall -USR1 i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle && pkill -RTMIN+10 i3blocks
@@ -156,8 +158,6 @@ bindsym shift+XF86AudioRaiseVolume exec --no-startup-id qdbus org.mpris.MediaPla
 bindsym shift+XF86AudioLowerVolume exec --no-startup-id qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 bindsym XF86AudioPrev exec --no-startup-id qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 
-
-
 # Pulse Audio controls
 # Increase
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && killall -USR1 i3status
@@ -170,6 +170,15 @@ bindsym XF86AudioPrev exec --no-startup-id qdbus org.mpris.MediaPlayer2.spotify 
 #"amixer set Master playback 1+"
 #bindsym XF86AudioRaiseVolume exec --no-startup-id sh ~/Documents/Scripts/change_volume.sh -c up -i 10% -m Master
 #bindsym XF86AudioLowerVolume exec --no-startup-id sh ~/Documents/Scripts/change_volume.sh -c down -i 10% -m Master
+# ---------------------------------------------
+
+# Sticky note contols (xpad)
+bindsym $mod+apostrophe exec xpad --toggle
+bindsym $mod+shift+apostrophe resize set 300 300
+bindsym $mod+shift+equal resize grow down 50
+bindsym $mod+shift+minus resize shrink down 50
+bindsym $mod+shift+bracketright resize grow right 50
+bindsym $mod+shift+bracketleft resize shrink right 50
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
