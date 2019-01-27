@@ -8,3 +8,5 @@ alias dates "python3 /home/caleb/scripts/date-tracker/dates.py"
 alias spotify-lyrics "python /home/caleb/scripts/spotify-lyrics/spotify-lyrics.py"
 
 alias l "ls -GghB --group-directories-first"
+alias mira "ssh klbn65@mira.dur.ac.uk"
+alias ham "ssh klbn65@hamilton.dur.ac.uk"

@@ -29,11 +29,13 @@ if (has("termguicolors"))
   :set termguicolors
 endif
 
-:colorscheme OceanicNext
+":colorscheme OceanicNext
+:colorscheme typewriter-custom
 
 :syntax on
 :set number
-:set relativenumber
+" :set relativenumber
+:set colorcolumn=79
 
 :set expandtab
 :set shiftwidth=4
@@ -42,6 +44,8 @@ endif
 
 :set autoindent
 :set smartindent
+
+:set autochdir
 
 nnoremap <buffer> <F5> :exec '!python' shellescape(@%, 1)<cr>
 
