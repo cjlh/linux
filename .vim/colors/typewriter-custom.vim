@@ -9,9 +9,13 @@ endif
 
 let g:colors_name = "typewriter-custom"
 
-hi Cursor                                   guibg=#00BAFF
-hi Normal          ctermfg=235 ctermbg=255  guifg=#424242 guibg=#F0E5E6
-hi Title           ctermfg=235 ctermbg=255  guifg=#424242 guibg=#F0E5E6 term=bold   cterm=bold   gui=bold
+" Pink custom background was #F0E5E6 with ruler #F3F3F3
+
+" hi Cursor                                   guibg=#00BAFF
+hi Cursor                                   guibg=#000000
+hi Normal          ctermfg=235 ctermbg=255  guifg=#424242 guibg=#F3F3F3
+" hi Normal          ctermfg=235 ctermbg=255  guifg=#000000 guibg=#F3F3F3
+hi Title           ctermfg=235 ctermbg=255  guifg=#424242 guibg=#F3F3F3 term=bold   cterm=bold   gui=bold
 hi Special         ctermfg=234 ctermbg=NONE guifg=#1C1C1C guibg=NONE
 hi Comment         ctermfg=247 ctermbg=NONE guifg=#9E9E9E guibg=NONE    term=italic cterm=italic gui=italic
 hi Constant        ctermfg=237 ctermbg=NONE guifg=#3A3A3A guibg=NONE
@@ -33,23 +37,30 @@ hi CursorLine      ctermfg=235 ctermbg=NONE guifg=#262626 guibg=NONE
 hi CursorLineNR    ctermfg=232 ctermbg=255  guifg=#080808 term=bold cterm=bold gui=bold
 hi Search          ctermfg=235 ctermbg=153  guifg=#424242 guibg=#C1E7F4 cterm=bold gui=bold
 hi IncSearch       ctermfg=235 ctermbg=121  guifg=#424242 guibg=#C3E9DB cterm=bold gui=bold
-hi WildMenu        ctermfg=235 ctermbg=255  guifg=#424242 guibg=#F0E5E6
+hi WildMenu        ctermfg=235 ctermbg=255  guifg=#424242 guibg=#F3F3F3
 
 " Messages
-hi ModeMsg         ctermfg=235 ctermbg=255  guifg=#424242 guibg=#F0E5E6
-hi MoreMsg         ctermfg=235 ctermbg=255  guifg=#424242 guibg=#F0E5E6
-hi WarningMsg      ctermfg=202 ctermbg=255  guifg=#FF5F00 guibg=#F0E5E6
-hi ErrorMsg        ctermfg=197 ctermbg=255  guifg=#E41D91 guibg=#F0E5E6 cterm=italic gui=italic
+hi ModeMsg         ctermfg=235 ctermbg=255  guifg=#424242 guibg=#F3F3F3
+hi MoreMsg         ctermfg=235 ctermbg=255  guifg=#424242 guibg=#F3F3F3
+hi WarningMsg      ctermfg=202 ctermbg=255  guifg=#FF5F00 guibg=#F3F3F3
+hi ErrorMsg        ctermfg=197 ctermbg=255  guifg=#E41D91 guibg=#F3F3F3 cterm=italic gui=italic
 
 hi Visual          ctermfg=235 ctermbg=153  guifg=#424242 guibg=#C1E7F4
-hi SpecialKey      ctermfg=255 ctermbg=NONE
-hi NonText         ctermfg=249 ctermbg=NONE
-hi ExtraWhitespace             ctermbg=115  guibg=#87D7AF
+" hi SpecialKey      ctermfg=255 ctermbg=NONE
+" hi NonText         ctermfg=249 ctermbg=NONE
+hi SpecialKey      ctermfg=255 ctermbg=NONE guifg=#89728A
+hi NonText         ctermfg=249 ctermbg=NONE guifg=#757575
+" Added the following based on StackOverflow
+hi EndOfBuffer     ctermfg=bg
+" Added the following based on :highlight
+hi Directory       ctermfg=6   ctermbg=NONE guifg=#839496
+" hi ExtraWhitespace             ctermbg=115  guibg=#87D7AF
+hi ExtraWhitespace             ctermbg=115  guibg=#F0E5E6
 hi MatchParen      ctermfg=234 ctermbg=253  guifg=#1C1C1C guibg=#DADADA cterm=bold gui=bold gui=bold
 hi Pmenu           ctermfg=235 ctermbg=252  guifg=#424242 guibg=#D0D0D0
-hi PmenuSel        ctermfg=255 ctermbg=234  guifg=#F0E5E6 guibg=#1C1C1C
-hi VertSplit       ctermfg=254 ctermbg=245  guifg=#E4E4E4 guibg=#8A8A8A
-hi ColorColumn                 ctermbg=254  guibg=#E4E4E4
+hi PmenuSel        ctermfg=255 ctermbg=234  guifg=#F3F3F3 guibg=#1C1C1C
+hi VertSplit       ctermfg=254 ctermbg=245  guifg=#F0E5E6 guibg=#8A8A8A
+hi ColorColumn                 ctermbg=254  guibg=#F0E5E6
 hi Underlined      ctermfg=246 ctermbg=NONE guifg=#949494 cterm=underline term=underline gui=underline
 
 match ExtraWhitespace /\s\+$/
